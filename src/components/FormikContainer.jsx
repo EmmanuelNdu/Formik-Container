@@ -20,7 +20,7 @@ const FormikContainer = () => {
       email: '',
       description: '',
       selectOption: '',
-      radioOptions: ''
+      radioOption: ''
     }
     const validationSchema = Yup.object({
       email: Yup.string().required('Required'),
@@ -55,7 +55,7 @@ const FormikContainer = () => {
               options={dropdownOptions}
               />
               <FormikControl
-              control=''radio
+              control='radio'
               label='Radio Topic'
               name='radioOption'
               options={radioOptions}

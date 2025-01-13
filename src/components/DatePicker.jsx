@@ -21,7 +21,7 @@ const DatePicker = (props) => {
                         {...field} 
                         {...rest} 
                         selected={value} 
-                        onchange={val => setFieldValue(name, val)} 
+                        onChange={val => setFieldValue(name, val)} 
                         />
                 }
             }

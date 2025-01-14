@@ -1,5 +1,5 @@
 import React from 'react'
-import { Formik, Form, validateYupSchema } from 'formik'
+import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import FormikControl from './FormikControl'
 
@@ -18,10 +18,10 @@ const LoginForm = () => {
         console.log('Form data', values)
     }
   return (
-    <Formik initialValues={initialValues} validationSchema={validateYupSchema} onSubmit={onSubmit}>
+    <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
         {
             formik => {
-                return <form>
+                return <Form>
                     <FormikControl
                     control='input'
                     type='email'
@@ -33,7 +33,7 @@ const LoginForm = () => {
                     label='Password'
                     name='password'/>
                     <button type='submit' disabled={!formik.isValid}>Submit</button>
-                </form>
+                </Form>
             }
         }
     </Formik>

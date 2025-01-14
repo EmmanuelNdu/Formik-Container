@@ -1,12 +1,11 @@
 import React from 'react'
-import DatePicker from 'react-date-picker'
-import 'react-date-picker/dist/DatePicker.css'
-import 'react-calendar/dist/Calendar.css'
+import DateView from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css';
 import { Field, ErrorMessage } from 'formik'
 import TextError from './TextError'
 
 
-const DatePicker = (props) => {
+const FormikDatePicker = (props) => {
     const { label, name, ...rest } = props
   return (
     <div className='form-control'>
@@ -31,4 +30,6 @@ const DatePicker = (props) => {
   )
 }
 
-export default DatePicker
+export default FormikDatePicker
+
+

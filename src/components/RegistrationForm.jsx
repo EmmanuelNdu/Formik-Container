@@ -22,7 +22,7 @@ const RegistrationForm = () => {
         .required('Required'),
         password: Yup.string().required('Required'),
         confirmPassword: Yup.string()
-        .oneOf([Yup.ref('password'), ''], 'Password must match')
+        .oneOf([Yup.ref('password'), ], 'Password must match')
         .required('Required'),
         modeOfContact: Yup.string().required('Required'),
         phone: Yup.string().when('modeOfContact', {
